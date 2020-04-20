@@ -138,6 +138,7 @@ hot reload:
 
 ```sh
 shadow-cljs -A dev watch app
+
 ```
 
 Please be patient; it may take over 20 seconds to see any output, and over 40 seconds to complete.
@@ -200,7 +201,7 @@ For example, in Vim / Neovim with `fireplace.vim`
 3. See [`user.cljs`](dev/cljs/user.cljs) for symbols that are immediately accessible in the REPL
 without needing to `require`.{{#test?}}
 
-### Running Tests &&&
+### Running Tests
 
 Build the app with the `prod` profile, start a temporary local web server, launch headless
 Chrome/Chromium, run tests, and stop the web server:

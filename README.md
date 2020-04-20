@@ -199,7 +199,25 @@ Contributions are welcomed!  To add a new profile, this is what I'd recommend:
 7. Locally test that your profile works, `lein new re-frame <app-name> +<profile-name>`
 8. Add your profile to [create-templates](https://github.com/day8/re-frame-template/blob/master/create-templates.sh) and run the script to make sure the other profiles didn't break.
 
+Build a deployable jar of this template:
+
+    $ clojure -A:jar
+
+Install it locally:
+
+    $ clojure -A:install
+
+Deploy it to Clojars -- needs `CLOJARS_USERNAME` and `CLOJARS_PASSWORD` environment variables:
+
+    $ clojure -A:deploy
+
 ## License
+
+The MIT License (MIT)
+
+Copyright © 2020 Robert J. Berger
+
+Based on the work of the following from [day8](https://github.com/day8/re-frame-template):
 
 ```
 The MIT License (MIT)
@@ -229,27 +247,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
-FIXME: my new template.
-
-## Usage
-
-FIXME: write usage documentation!
-
-Build a deployable jar of this template:
-
-    $ clojure -A:jar
-
-Install it locally:
-
-    $ clojure -A:install
-
-Deploy it to Clojars -- needs `CLOJARS_USERNAME` and `CLOJARS_PASSWORD` environment variables:
-
-    $ clojure -A:deploy
-
-## License
-
-Copyright © 2020 Rberger
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
