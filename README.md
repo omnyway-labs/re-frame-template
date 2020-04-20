@@ -38,6 +38,18 @@ where you might, for example, substitute `my-github-name/my-killer-app`  for the
 
 > **Troubleshooting note:** for `<project-name>` don't use `cljs`. That name will confuse the compiler (long story) and you will later see errors like `cljs.core.init is not a function`. 
 
+Build a deployable jar of this template:
+
+    $ clojure -A:jar
+
+Install it locally:
+
+    $ clojure -A:install
+
+Deploy it to Clojars -- needs `CLOJARS_USERNAME` and `CLOJARS_PASSWORD` environment variables:
+
+    $ clojure -A:deploy
+
 ## Extras
 
 The optional extras (aka profiles) include:
@@ -190,26 +202,13 @@ See the [external resources](https://github.com/day8/re-frame/blob/master/docs/E
 
 Contributions are welcomed!  To add a new profile, this is what I'd recommend:
 
-1. Add a file with the name of the profile [here](https://github.com/day8/re-frame-template/tree/master/src/leiningen/new/options)
+1. Add a file with the name of the profile [here](https://github.com/omnyway-labs/re-frame-template/tree/master/src/clj/new/options)
 2. Look at the existing options in that folder for inspiration for what to include in that file
-3. Update [project.clj](https://github.com/day8/re-frame-template/blob/master/src/leiningen/new/re_frame.clj) with the profile
-4. Add any new files [here](https://github.com/day8/re-frame-template/tree/master/src/leiningen/new/re_frame) and use the {{ var-name }} syntax as needed
-5. Update the [README](https://github.com/day8/re-frame-template/tree/master/src/leiningen/new/re_frame) that will result when the template is used, as well as the top-level [README](https://github.com/day8/re-frame-template/blob/master/README.md) for re-frame-template itself
-6. In a terminal, at the root of re-frame-template, run `lein install`
-7. Locally test that your profile works, `lein new re-frame <app-name> +<profile-name>`
-8. Add your profile to [create-templates](https://github.com/day8/re-frame-template/blob/master/create-templates.sh) and run the script to make sure the other profiles didn't break.
-
-Build a deployable jar of this template:
-
-    $ clojure -A:jar
-
-Install it locally:
-
-    $ clojure -A:install
-
-Deploy it to Clojars -- needs `CLOJARS_USERNAME` and `CLOJARS_PASSWORD` environment variables:
-
-    $ clojure -A:deploy
+3. Update [project.clj](https://github.com/omnyway-labs/re-frame-template/tree/master/src/clj/new/re_frame_template.clj) with the profile
+4. Add any new files [here](https://github.com/omnyway-labs/re-frame-template/tree/master/resources/clj/new/re_frame_template) and use the {{ var-name }} syntax as needed
+5. Update the [README](https://github.com/omnyway-labs/re-frame-template/tree/master/resources/clj/new/re_frame_template/README.md) that will result when the template is used, as well as the top-level [README](https://github.com/omnyway-labs/re-frame-template/tree/master/README.md) for re-frame-template itself
+6. In a terminal, at the root of re-frame-template, run `clj -A:install`
+7. Locally test that your profile works, `clj -A:new  <path-to-re-frame-template repo>::re-frame-template <myname/project-name> +<profile-name>`
 
 ## License
 
