@@ -1,5 +1,5 @@
 (ns clj.new.re-frame-template
-  (:require [clj.new.templates :refer [renderer project-data name-to-path santitize-ns ->files]]
+  (:require [clj.new.templates :refer [renderer project-data name-to-path sanitize-ns ->files]]
             [clj.new.re-frame-template.options.base :as base]
             [clj.new.re-frame-template.options.kondo :as kondo]
             [clj.new.re-frame-template.options.re-com :as re-com]
@@ -9,7 +9,6 @@
             [clj.new.re-frame-template.options.cider :as cider]
             [clojure.set :as set]))
 
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Files & Data for Template
 
@@ -17,10 +16,6 @@
   (concat
    (base/files data)
    (views/view-cljs options data)
-
-   ;; css
-   (when (helpers/option? garden/option options) (garden/files data))
-   (when (helpers/option? less/option options) (less/files data))
 
    ;; debug
    ;;
@@ -30,25 +25,16 @@
    (when (helpers/option? test/option options) (test/files data))
 
    ;; full-stack
-   (when (helpers/option? handler/option options) (handler/files data))
    (when (helpers/option? cider/option options) (cider/files data))
 
    ;; misc.
-   (when (helpers/option? re-com/option options) (re-com/assets data))
-
-   ;; routing
-   (when (helpers/option? routes/option options) (routes/routes-cljs data))))
-
+   (when (helpers/option? re-com/option options) (re-com/assets data))))
 
 
 (defn template-data [name options]
   {:name      name
    :ns-name   (sanitize-ns name)
    :sanitized (name-to-path name)
-
-   ;; css
-   :garden? (helpers/option? garden/option options)
-   :less?   (helpers/option? less/option options)
 
    ;; debug
    :re-frisk? (helpers/option? "+re-frisk" options)
@@ -60,20 +46,11 @@
    :test?    (helpers/option? test/option options)
 
    ;; full-stack
-   :handler?    (helpers/option? handler/option options)
-   :prep-garden (when (helpers/option? garden/option options)
-                  ["garden" "once"])
-   :prep-less   (when (helpers/option? less/option options)
-                  ["less" "once"])
 
    ;; misc.
    :re-com?     (helpers/option? re-com/option options)
    :re-pressed? (helpers/option? "+re-pressed" options)
-   :breaking-point? (helpers/option? "+breaking-point" options)
-
-   ;; routing
-   :routes? (helpers/option? routes/option options)})
-
+   :breaking-point? (helpers/option? "+breaking-point" options)})
 
 
 
@@ -81,11 +58,7 @@
 ;; Check Options
 
 (def available-set
-  #{;; css
-    garden/option
-    less/option
-
-    ;; debug
+  #{;; debug
     "+re-frisk"
     "+10x"
 
@@ -94,16 +67,10 @@
     kondo/option
     test/option
 
-    ;; full-stack
-    handler/option
-
     ;; misc.
     re-com/option
     "+re-pressed"
-    "+breaking-point"
-
-    ;; routing
-    routes/option})
+    "+breaking-point"})
 
 
 
@@ -112,7 +79,8 @@
         abort?      (not (set/superset? available-set
                                         options-set))]
     (when abort?
-      (main/abort "\nError: invalid profile(s)\n"))))
+      (println "\nError: invalid profile(s)\n")
+      (System/exit 1))))
 
 
 (defn check-options

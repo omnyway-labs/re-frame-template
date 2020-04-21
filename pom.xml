@@ -9,13 +9,13 @@
   <url>https://github.com/omnyway-labs/re-frame-template</url>
   <licenses>
     <license>
-      <name>Eclipse Public License</name>
-      <url>http://www.eclipse.org/legal/epl-v10.html</url>
+      <name>MIT License</name>
+      <url>https://rem.mit-license.org</url>
     </license>
   </licenses>
   <developers>
     <developer>
-      <name>Rberger</name>
+      <name>Robert J. Berger</name>
     </developer>
   </developers>
   <scm>

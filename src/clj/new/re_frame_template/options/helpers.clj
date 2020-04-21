@@ -1,5 +1,5 @@
 (ns clj.new.re-frame-template.options.helpers
-  (:use [clj.new.re-frame-template.templates :only [renderer sanitize]]
+  (:use [clj.new.templates :only [renderer sanitize]]
         [clojure.java.io :as io]))
 
 (def template-name "re-frame-template")

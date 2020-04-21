@@ -211,7 +211,7 @@ shadow-cljs -A prod compile karma-test
 karma start --single-run --reporters junit,dots
 ```
 
-Please be patient; it may take over 15 seconds to see any output, and over 25 seconds to complete.
+Please be patient; it may take over 15 seconds to see any output, and over 25 seconds to complete.{{/test?}}
 
 ### Running `shadow-cljs` Actions
 
