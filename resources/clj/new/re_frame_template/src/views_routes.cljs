@@ -1,9 +1,9 @@
-(ns {{ns-name}}.views
-  (:require
-   [re-frame.core :as re-frame]{{#breaking-point?}}
-   [breaking-point.core :as bp]{{/breaking-point?}}
-   [{{ns-name}}.subs :as subs]
-   ))
+(ns {{namespace}}.views
+    (:require
+     [re-frame.core :as re-frame]{{#breaking-point?}}
+     [breaking-point.core :as bp]{{/breaking-point?}}
+     [{{namespace}}.subs :as subs]
+     ))
 
 
 ;; home

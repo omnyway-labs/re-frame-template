@@ -11,8 +11,8 @@
    ["karma.conf.js" (helpers/render "karma.conf.js" data)]
    ["dev/cljs/user.cljs" (helpers/render "dev/cljs/user.cljs" data)]
    ["resources/public/index.html" (helpers/render "resources/public/index.html" data)]
-   ["src/{{sanitized}}/core.cljs" (helpers/render "src/core.cljs" data)]
-   ["src/{{sanitized}}/config.cljs" (helpers/render "src/config.cljs" data)]
-   ["src/{{sanitized}}/db.cljs" (helpers/render "src/db.cljs" data)]
-   ["src/{{sanitized}}/subs.cljs" (helpers/render "src/subs.cljs" data)]
-   ["src/{{sanitized}}/events.cljs" (helpers/render "src/events.cljs" data)]])
+   ["src/{{nested-dirs}}/core.cljs" (helpers/render "src/core.cljs" data)]
+   ["src/{{nested-dirs}}/config.cljs" (helpers/render "src/config.cljs" data)]
+   ["src/{{nested-dirs}}/db.cljs" (helpers/render "src/db.cljs" data)]
+   ["src/{{nested-dirs}}/subs.cljs" (helpers/render "src/subs.cljs" data)]
+   ["src/{{nested-dirs}}/events.cljs" (helpers/render "src/events.cljs" data)]])

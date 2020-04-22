@@ -5,7 +5,7 @@
  :builds {:app {:target          :browser
                 :output-dir      "resources/public/js/compiled"
                 :asset-path      "/js/compiled"
-                :modules         {:app {:init-fn {{name}}.core/init
+                :modules         {:app {:init-fn {{namespace}}.core/init
                                         :preloads [devtools.preload{{#10x?}}
                                                    day8.re-frame-10x.preload{{/10x?}}{{#re-frisk?}}
                                                    re-frisk.preload{{/re-frisk?}}]}}{{#10x?}}

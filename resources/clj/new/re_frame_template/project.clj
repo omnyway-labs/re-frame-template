@@ -1,4 +1,4 @@
-(defproject {{ns-name}} "0.1.0-SNAPSHOT"
+(defproject {{namespace}} "0.1.0-SNAPSHOT"
   :dependencies [[org.clojure/clojure "1.10.1"]
                  [org.clojure/clojurescript "1.10.597"
                   :exclusions [com.google.javascript/closure-compiler-unshaded
@@ -33,17 +33,17 @@
                                     "test/js"{{/test?}}{{#garden?}}
                                     "resources/public/css"{{/garden?}}]
 
-{{#garden?}}
+  {{#garden?}}
 
   :garden {:builds [{:id           "screen"
                      :source-paths ["src/clj"]
                      :stylesheet   {{name}}.css/screen
                      :compiler     {:output-to     "resources/public/css/screen.css"
                                     :pretty-print? true}}]}
-{{/garden?}}{{#less?}}
+  {{/garden?}}{{#less?}}
   :less {:source-paths ["less"]
          :target-path  "resources/public/css"}
-{{/less?}}
+  {{/less?}}
 
   :shell {:commands {"open" {:windows ["cmd" "/c" "start"]
                              :macosx  "open"
@@ -73,8 +73,8 @@
    :uberjar {:source-paths ["env/prod/clj"]{{#10x?}}
              :dependencies [[day8.re-frame/tracing-stubs "0.5.3"]]{{/10x?}}
              :omit-source  true
-             :main         {{ns-name}}.server
-             :aot          [{{ns-name}}.server]
+             :main         {{namespace}}.server
+             :aot          [{{namespace}}.server]
              :uberjar-name "{{name}}.jar"
              :prep-tasks   ["compile" ["prod"]{{{prep-garden}}}{{{prep-less}}}]}{{/handler?}}}
 

@@ -1,14 +1,14 @@
-(ns {{ns-name}}.routes
-  (:require-macros [secretary.core :refer [defroute]])
-  (:import [goog History]
-           [goog.history EventType])
-  (:require
-   [secretary.core :as secretary]
-   [goog.events :as gevents]
-   [re-frame.core :as re-frame]{{#re-pressed?}}
-   [re-pressed.core :as rp]{{/re-pressed?}}
-   [{{ns-name}}.events :as events]
-   ))
+(ns {{namespace}}.routes
+    (:require-macros [secretary.core :refer [defroute]])
+    (:import [goog History]
+             [goog.history EventType])
+    (:require
+     [secretary.core :as secretary]
+     [goog.events :as gevents]
+     [re-frame.core :as re-frame]{{#re-pressed?}}
+     [re-pressed.core :as rp]{{/re-pressed?}}
+     [{{namespace}}.events :as events]
+     ))
 
 (defn hook-browser-navigation! []
   (doto (History.)

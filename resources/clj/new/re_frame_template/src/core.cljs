@@ -1,14 +1,14 @@
-(ns {{ns-name}}.core
-  (:require
-   [reagent.core :as reagent]
-   [re-frame.core :as re-frame]{{#re-pressed?}}
-   [re-pressed.core :as rp]{{/re-pressed?}}{{#breaking-point?}}
-   [breaking-point.core :as bp]{{/breaking-point?}}
-   [{{ns-name}}.events :as events]{{#routes?}}
-   [{{ns-name}}.routes :as routes]{{/routes?}}
-   [{{ns-name}}.views :as views]
-   [{{ns-name}}.config :as config]
-   ))
+(ns {{namespace}}.core
+    (:require
+     [reagent.core :as reagent]
+     [re-frame.core :as re-frame]{{#re-pressed?}}
+     [re-pressed.core :as rp]{{/re-pressed?}}{{#breaking-point?}}
+     [breaking-point.core :as bp]{{/breaking-point?}}
+     [{{namespace}}.events :as events]{{#routes?}}
+     [{{namespace}}.routes :as routes]{{/routes?}}
+     [{{namespace}}.views :as views]
+     [{{namespace}}.config :as config]
+     ))
 
 
 (defn dev-setup []

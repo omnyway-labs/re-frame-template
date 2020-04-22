@@ -3,7 +3,7 @@
             [clj.new.re-frame-template.options.re-com :as re-com]))
 
 (defn file [name data]
-  [ ["src/{{sanitized}}/views.cljs"
+  [ ["src/{{nested-dirs}}/views.cljs"
      (helpers/render (str "src/" name ".cljs")
                      data)] ])
 
