@@ -1,6 +1,6 @@
 # re-frame-template
 
-__NOTE: THIS IS A WIP AND NOT WORKING OR FULLY DEBUGGED YET!!__
+__NOTE: THIS IS A WIP AND NOT FULLY DEBUGGED YET!!__
 
 A Clojure tools.deps template for quickly creating a [re-frame](https://github.com/day8/re-frame) application scaffold (client only). It only takes you 60 seconds to create your first re-frame app and to start editting it. 
 
@@ -10,7 +10,18 @@ This is a translation of the [Leiningen based template from
 day8](https://github.com/day8/re-frame-template) to use the
 `seancorfield/clj-new` template mechanism for tools.deps style builds. It does
 not have all the options the original had as I did not know how to use them or
-translate them to deps.edn style. Pull Requests welcome!
+translate them to deps.edn style. 
+
+The following are not included:
+
+* ~~garden~~
+* ~~less~~
+* ~~route (secretary)~~
+* ~~handler (compojure)~~
+
+__Pull Requests welcome!__
+
+Will be adding [reitit](https://metosin.github.io/reitit/)
 
 ## Basic Usage
 
