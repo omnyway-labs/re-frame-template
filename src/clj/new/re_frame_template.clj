@@ -32,25 +32,27 @@
 
 
 (defn template-data [name options]
-  {:name      name
-   :ns-name   (sanitize-ns name)
-   :sanitized (name-to-path name)
+  (let [data (merge {;; :ns-name   (sanitize-ns name)
+                     ;; :sanitized (name-to-path name)
 
-   ;; debug
-   :re-frisk? (helpers/option? "+re-frisk" options)
-   :10x?      (helpers/option? "+10x" options)
+                     ;; debug
+                     :re-frisk? (helpers/option? "+re-frisk" options)
+                     :10x?      (helpers/option? "+10x" options)
 
-   ;; development
-   :cider?   (helpers/option? cider/option options)
-   :kondo?   (helpers/option? kondo/option options)
-   :test?    (helpers/option? test/option options)
+                     ;; development
+                     :cider?   (helpers/option? cider/option options)
+                     :kondo?   (helpers/option? kondo/option options)
+                     :test?    (helpers/option? test/option options)
 
-   ;; full-stack
+                     ;; full-stack
 
-   ;; misc.
-   :re-com?     (helpers/option? re-com/option options)
-   :re-pressed? (helpers/option? "+re-pressed" options)
-   :breaking-point? (helpers/option? "+breaking-point" options)})
+                     ;; misc.
+                     :re-com?     (helpers/option? re-com/option options)
+                     :re-pressed? (helpers/option? "+re-pressed" options)
+                     :breaking-point? (helpers/option? "+breaking-point" options)}
+                    (project-data name))]
+    (clojure.pprint/pprint data))
+  )
 
 
 

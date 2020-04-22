@@ -1,12 +1,12 @@
-(ns {{ns-name}}.views
-  (:require
-   [re-frame.core :as re-frame]
-   [re-com.core :as re-com]{{#breaking-point?}}
-   [breaking-point.core :as bp]{{/breaking-point?}}{{#re-pressed?}}
-   [re-pressed.core :as rp]
-   [{{ns-name}}.events :as events]{{/re-pressed?}}
-   [{{ns-name}}.subs :as subs]
-   ))
+(ns {{namespace}}.views
+    (:require
+     [re-frame.core :as re-frame]
+     [re-com.core :as re-com]{{#breaking-point?}}
+     [breaking-point.core :as bp]{{/breaking-point?}}{{#re-pressed?}}
+     [re-pressed.core :as rp]
+     [{{namespace}}.events :as events]{{/re-pressed?}}
+     [{{namespace}}.subs :as subs]
+     ))
 
 {{#re-pressed?}}
 (defn dispatch-keydown-rules []

@@ -54,10 +54,10 @@ you.
     - Created on build with either the [dev](#running-the-app) or [prod](#production) profile
     - `js/compiled/`: compiled CLJS (`shadow-cljs`)
       - Not tracked in source control; see [`.gitignore`](.gitignore)
-* [`src/cljs/{{sanitized}}/`](src/cljs/{{sanitized}}/): SPA source files (ClojureScript,
+* [`src/cljs/{{nested-dirs}}/`](src/cljs/{{nested-dirs}}/): SPA source files (ClojureScript,
 [re-frame](https://github.com/Day8/re-frame))
-  - [`core.cljs`](src/cljs/{{sanitized}}/core.cljs): contains the SPA entry point, `init`{{#test?}}
-* [`test/cljs/{{sanitized}}/`](test/cljs/{{sanitized}}/): test files (ClojureScript,
+  - [`core.cljs`](src/cljs/{{nested-dirs}}/core.cljs): contains the SPA entry point, `init`{{#test?}}
+* [`test/cljs/{{nested-dirs}}/`](test/cljs/{{nested-dirs}}/): test files (ClojureScript,
 [cljs.test](https://clojurescript.org/tools/testing))
   - Only namespaces ending in `-test` (files `*_test.cljs`) are compiled and sent to the test runner{{/test?}}
 
@@ -230,14 +230,14 @@ shadow-cljs -A <env> <action> app
 ```
 ### Debug Logging
 
-The `debug?` variable in [`config.cljs`](src/{{sanitized}}/config.cljs) defaults to `true` in
+The `debug?` variable in [`config.cljs`](src/{{nested-dirs}}/config.cljs) defaults to `true` in
 [`dev`](#running-the-app) builds, and `false` in [`prod`](#production) builds.
 
 Use `debug?` for logging or other tasks that should run only on `dev` builds:
 
 ```clj
-(ns {{ns-name}}.example
-  (:require [{{ns-name}}.config :as config])
+(ns {{namespace}}.example
+  (:require [{{namespace}}.config :as config])
 
 (when config/debug?
   (println "This message will appear in the browser console only on dev builds."))
