@@ -227,9 +227,10 @@ Contributions are welcomed!  To add a new profile, this is what I'd recommend:
 
 The MIT License (MIT)
 
-Copyright © 2020 Robert J. Berger
+clj-new implementation by:
+Copyright (c) 2020 Robert Berger
 
-Based on the work of the following from [day8](https://github.com/day8/re-frame-template):
+Based on the original lein template version by: [day8](https://github.com/day8/re-frame-template):
 
 ```
 The MIT License (MIT)
