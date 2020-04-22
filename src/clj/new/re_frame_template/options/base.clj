@@ -5,7 +5,6 @@
   [[".gitignore" (helpers/render "gitignore" data)]
    ["README.md" (helpers/render "README.md" data)]
    ["deps.edn" (helpers/render "deps.edn" data)]
-   ["project.clj" (helpers/render "project.clj" data)]
    ["shadow-cljs.edn" (helpers/render "shadow-cljs.edn" data)]
    ["package.json" (helpers/render "package.json" data)]
    ["karma.conf.js" (helpers/render "karma.conf.js" data)]

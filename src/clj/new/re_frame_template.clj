@@ -51,7 +51,7 @@
                      :re-pressed? (helpers/option? "+re-pressed" options)
                      :breaking-point? (helpers/option? "+breaking-point" options)}
                     (project-data name))]
-    (clojure.pprint/pprint data)
+    ;; (clojure.pprint/pprint data)
     data)
 
   )
