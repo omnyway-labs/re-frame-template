@@ -1,10 +1,12 @@
 # re-frame-template
 
-__NOTE: THIS IS A WIP AND NOT FULLY DEBUGGED YET!!__
+A Clojure tools.deps template for quickly creating a
+[re-frame](https://github.com/day8/re-frame) application scaffold (client only).
+It only takes you 60 seconds to create your first re-frame app and to start
+editting it.
 
-A Clojure tools.deps template for quickly creating a [re-frame](https://github.com/day8/re-frame) application scaffold (client only). It only takes you 60 seconds to create your first re-frame app and to start editting it. 
-
-Provides a way to pick and choose what "extras" are included into your application. Extras like libraries which do routing, debugging and CSS. 
+Provides a way to pick and choose what "extras" are included into your
+application. Extras like libraries which do routing, debugging and CSS.
 
 This is a translation of the [Leiningen based template from
 day8](https://github.com/day8/re-frame-template) to use the
