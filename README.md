@@ -1,5 +1,7 @@
 # re-frame-template
 
+[![Clojars Project](https://img.shields.io/clojars/v/re-frame-template/clj-template.svg)](https://clojars.org/re-frame-template/clj-template)
+
 A Clojure tools.deps template for quickly creating a
 [re-frame](https://github.com/day8/re-frame) application scaffold (client only).
 It only takes you 60 seconds to create your first re-frame app and to start

@@ -3,9 +3,9 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>re-frame-template</groupId>
   <artifactId>clj-template</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
+  <version>0.1.2</version>
   <name>re-frame-template</name>
-  <description>FIXME: my new template.</description>
+  <description>clj-new / shadow-cljs template for basic re-frame SPA project</description>
   <url>https://github.com/omnyway-labs/re-frame-template</url>
   <licenses>
     <license>
@@ -29,6 +29,11 @@
       <groupId>org.clojure</groupId>
       <artifactId>clojure</artifactId>
       <version>1.10.1</version>
+    </dependency>
+    <dependency>
+      <groupId>seancorfield</groupId>
+      <artifactId>clj-new</artifactId>
+      <version>1.0.199</version>
     </dependency>
   </dependencies>
   <build>
