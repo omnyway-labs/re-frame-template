@@ -45,27 +45,31 @@ Set up an alias for clj-new
      ...}
 ```
 
-Until the template is hosted in clojars, you need to use the version in github. The easiest way is to clone it to your local computer.
+### Using from Clojars
 
+The easiest way is to use clj-new and this template from Clojars. 
 To create an application with just the base template, use this commandline:
+
 ```
-clj -A:new  <path-to-re-frame-template repo>::re-frame-template <myname/project-name>
+clj -A:new re-frame-template <myname/project-name>
 ```
-where you might, for example, substitute `my-github-name/my-killer-app`  for the `<myname/project-name>` bit or, perhaps, `my-github-name/an-early-masterpiece`.
+
+where you might, for example, substitute `my-github-name/my-killer-app` for the
+`<myname/project-name>` bit or, perhaps, `my-github-name/an-early-masterpiece`.
+
+By default this will try to write the output to the path` myname/project-name`.
+If you want it to just go to `project-name` or some other arbitrary name you can
+append at the end `-o project-name` or whatever name you want.
+
 
 > **Troubleshooting note:** for `<project-name>` don't use `cljs`. That name will confuse the compiler (long story) and you will later see errors like `cljs.core.init is not a function`. 
 
-Build a deployable jar of this template:
+### From a local clone of the template repo
 
-    $ clojure -A:jar
-
-Install it locally:
-
-    $ clojure -A:install
-
-Deploy it to Clojars -- needs `CLOJARS_USERNAME` and `CLOJARS_PASSWORD` environment variables:
-
-    $ clojure -A:deploy
+Clone this repo locally and then you can use it this way:
+```
+clj -A:new  <path-to-re-frame-template repo>::re-frame-template <myname/project-name>
+```
 
 ## Extras
 
@@ -214,6 +218,20 @@ shadow-cljs -A prod release app
 
 Looking for more re-frame inspiration, templates or example applications?
 See the [external resources](https://github.com/day8/re-frame/blob/master/docs/External-Resources.md) docs page.
+
+## Building the template repo itself
+
+Build a deployable jar of this template:
+
+    $ clojure -A:jar
+
+Install it locally:
+
+    $ clojure -A:install
+
+Deploy it to Clojars -- needs `CLOJARS_USERNAME` and `CLOJARS_PASSWORD` environment variables:
+
+    $ clojure -A:deploy
 
 ## Contributing
 
