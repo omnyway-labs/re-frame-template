@@ -4,6 +4,7 @@
 /*-init.clj
 /*.log
 /.cpcache/
+.DS_Store
 
 # Leiningen
 /.lein-*
