@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>re-frame-template</groupId>
   <artifactId>clj-template</artifactId>
-  <version>0.1.3</version>
+  <version>0.1.4</version>
   <name>re-frame-template</name>
   <description>clj-new / shadow-cljs template for basic re-frame SPA project</description>
   <url>https://github.com/omnyway-labs/re-frame-template</url>
