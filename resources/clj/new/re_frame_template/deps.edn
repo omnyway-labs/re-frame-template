@@ -20,7 +20,7 @@
                      day8.re-frame/tracing {:mvn/version "0.5.3"}{{/10x?}}{{#re-frisk?}}
                      re-frisk {:mvn/version "1.2.0"}{{/re-frisk?}}}
         :extra-paths ["src" "dev"]}
-  :prod { {{#10x?}}:extra-deps {:day8.re-frame{tracing-stubs {:mvn/version "0.5.3"}}{{/10x?}}}
+  :prod { {{#10x?}}:extra-deps {:day8.re-frame{tracing-stubs {:mvn/version "0.5.3"}}}{{/10x?}}
          :run {:jvm-opts ["-Xmx1G"]}}
   :runner
   {:extra-deps {:com.cognitect/test-runner
