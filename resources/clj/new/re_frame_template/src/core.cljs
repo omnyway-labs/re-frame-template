@@ -1,6 +1,6 @@
 (ns {{namespace}}.core
     (:require
-     [reagent.core :as reagent]
+     [reagent.dom :as rdom]
      [re-frame.core :as re-frame]{{#re-pressed?}}
      [re-pressed.core :as rp]{{/re-pressed?}}{{#breaking-point?}}
      [breaking-point.core :as bp]{{/breaking-point?}}
@@ -17,7 +17,7 @@
 
 (defn ^:dev/after-load mount-root []
   (re-frame/clear-subscription-cache!)
-  (reagent/render [views/main-panel]
+  (rdom/render [views/main-panel]
                   (.getElementById js/document "app")))
 
 (defn init []{{#routes?}}

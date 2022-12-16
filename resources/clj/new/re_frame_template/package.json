@@ -1,9 +1,13 @@
 {
     "devDependencies": {
-        "shadow-cljs": "2.8.96"{{#test?}},
+        "shadow-cljs": "2.20.14"{{#test?}},
         "karma": "5.0.2",
         "karma-chrome-launcher": "3.1.0",
         "karma-cljs-test": "0.1.0",
         "karma-junit-reporter": "2.0.1"{{/test?}}
+  },
+    "dependencies": {
+        "react": "17.0.2",
+        "react-dom": "17.0.2"
   }
 }
